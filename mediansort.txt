@@ -1,0 +1,17 @@
+sort(A)
+1.  medianSort(A,0,n-1)
+end
+
+medianSort(A,left,right)
+1.  if(left<right) then
+2.     find median value A[me] in A[left,right]
+3.     mid = floor[ (right+left)/2 ]
+4.     swap A[mid] and A[me]
+5.     for i = left to mid-1 do
+6.        if (A[i] > A[mid]) then
+7.           find A[k] <= A[mid] where k>mid
+8.           swap A[i] and A[k]
+9.      medianSort(A,left,mid-1)
+10.     medianSort(A,mid+1,right)
+end
+
